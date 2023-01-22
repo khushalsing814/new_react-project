@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, NavLink} from 'react-router-dom';
 import {FaBars} from "react-icons/fa";
+import logo_image from '../assests/images/loin_logo.svg'
 
 const Header = ()=>{
 return (
@@ -8,7 +9,7 @@ return (
     <nav className="navbar navbar-expand-lg nav-bg-color" style={{zIndex:10000}}>
     <div className="container-fluid">
       <NavLink className="navbar-brand" to="/">
-      <img src={`/assests/images/loin_logo.svg`} alt='logo'></img>
+      <img src={logo_image} alt='logo'></img>
       Website</NavLink>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span style={{color:"orangered"}}><FaBars/></span>
