@@ -12,7 +12,7 @@ import CardData from './components/cardData';
 import Signup from './components/signup';
 import Login from './components/login';
 import Welcome from './components/welcome';
-import Singlepage_todolist from './components/singlepage_todolist';
+// import Singlepage_todolist from './components/singlepage_todolist';
 import Pagination from './components/pagination/pagination';
 import Newapi from './components/pagination/newapi';
 
@@ -26,8 +26,8 @@ function App() {
       <Route path='/' element={<Main/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/table' element={<TableData/>}></Route>
-      {/* <Route path='/todo-list' element={<Todolist/>}></Route> */}
-      <Route path='/singlepage_todolist' element={<Singlepage_todolist/>}></Route>
+       <Route path='/todo-list' element={<Todolist/>}></Route> 
+      {/* <Route path='/singlepage_todolist' element={<Singlepage_todolist/>}></Route> */}
       <Route path='/pagination' element={<Pagination/>}></Route>
       <Route path='/newapi' element={<Newapi/>}></Route>     //new api
       <Route path='/signup' element={<Signup/>}></Route>

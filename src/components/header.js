@@ -18,12 +18,12 @@ return (
           <li className="nav-item">
             <NavLink className="nav-link" aria-current="page" to="/table">table</NavLink>
           </li>
-          {/* <li className="nav-item">
+        <li className="nav-item">
             <NavLink className="nav-link" aria-current="page" to="/todo-list">todo-list</NavLink>
-          </li> */}
-          <li className="nav-item">
+          </li> 
+          {/* <li className="nav-item">
             <NavLink className="nav-link" aria-current="page" to="/singlepage_todolist">todo-list</NavLink>
-          </li>
+          </li> */}
           <li className="nav-item">
             <NavLink className="nav-link" aria-current="page" to="/about">about</NavLink>
           </li>
