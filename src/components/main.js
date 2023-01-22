@@ -17,7 +17,6 @@ const Main = () => {
     const [showbtn, setShowbtn] = useState(false);
     const [changefa_icon, setChangefa_icon] = useState(true);
     const [mouseover, setMouseover] = useState(false);
-    const [confirm, setConfirm] = useState(true);
 
     const handlereadmore = (itemid) => {
         console.log(itemid)
@@ -54,10 +53,6 @@ const Main = () => {
 
     return (
         <>
-            {
-                confirm &&
-                window.prompt("Enter your Name")
-            }
             <div className="row">
                 <h3>Total no. cards {cardData.length > 0 ? <span style={{ color: "red" }}>{cardData.length}</span> : <span style={{ color: "red" }}>...</span>} data showing perpage <span style={{ color: "red" }}>{postperpage}</span></h3>
                 {
