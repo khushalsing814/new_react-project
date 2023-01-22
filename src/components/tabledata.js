@@ -137,7 +137,7 @@ function TableData() {
           </tbody>
         </table>
       </div>
-      <Pagination totalPosts={tableData.length} postperpage={postperpage} setcurrentpage={setCurrentpage} />
+      {/* <Pagination totalPosts={tableData.length} postperpage={postperpage} setcurrentpage={setCurrentpage} /> */}
       {
       pagination && currentPosts.length > 0 && !loading &&
       <ReactPaginate
@@ -148,7 +148,7 @@ function TableData() {
         marginPagesDisplayed={2}
         pageRangeDisplayed={3}
         onPageChange={handlechange}
-        containerClassName={"pagination justify-content-end"}
+        containerClassName={"pagination justify-content-end mt-2"}
         pageClassName={"page-item"}
         pageLinkClassName={"page-link"}
         previousClassName={"page-item"}
