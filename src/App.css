@@ -366,6 +366,9 @@ footer.footer-style {
     display: grid;
     grid-template-columns: 135px auto;
   }
+  .loader.newapi{
+    top: 70px !important;
+  }
 }
 
 @media (max-width:576px){

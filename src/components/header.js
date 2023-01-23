@@ -26,10 +26,11 @@ return (
             <NavLink className="nav-link" aria-current="page" to="/singlepage_todolist">todo-list</NavLink>
           </li> */}
           <li className="nav-item">
-            <NavLink className="nav-link" aria-current="page" to="/about">about</NavLink>
+            {/* <NavLink className="nav-link" aria-current="page" to="/pagination">pagination</NavLink> */}
+            <NavLink className="nav-link" aria-current="page" to="/newapi">pagination</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" aria-current="page" to="/pagination">pagination</NavLink>
+            <NavLink className="nav-link" aria-current="page" to="/about">about</NavLink>
           </li>
         </ul>
         <form className="d-flex" role="search">

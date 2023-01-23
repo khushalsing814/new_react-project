@@ -54,7 +54,7 @@ const Main = () => {
     return (
         <>
             <div className="row">
-                <h3>Total no. cards {cardData.length > 0 ? <span style={{ color: "red" }}>{cardData.length}</span> : <span style={{ color: "red" }}>...</span>} data showing perpage <span style={{ color: "red" }}>{postperpage}</span></h3>
+                <h3>Total no. cards {cardData.length > 0 ? <span style={{ color: "red" }}>{cardData.length}</span> : <span style={{ color: "red" }}>...</span>}</h3>
                 {
                     spinner ?
                         <span className="loader"></span>

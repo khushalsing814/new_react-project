@@ -14,7 +14,7 @@ function TableData() {
   const [inputfield, setinputfield] = useState('');
   const [loading, setloading] = useState(false);
   const [currentpage, setCurrentpage] = useState(1);
-  const [postperpage, setPostperpage] = useState(1);
+  const [postperpage, setPostperpage] = useState(4);
   const [pagination, setPagination] = useState(false);
   const [resultt, setResult] = useState([]);
 

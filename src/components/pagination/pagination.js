@@ -7,7 +7,6 @@ function Pagination() {
     const [page, setPage] = useState();
     const [Data, setData] = useState([]);
     const [Data_Length, setData_Length] = useState();
-    const [pagination, setPagination] = useState(false);
     const handlechange = (data) => {
         setPage(data.selected)
         console.log(data.selected)
@@ -15,13 +14,11 @@ function Pagination() {
     }
 
     const fetchApiData = async () => {
-        setPagination(false)
         await axios.get(
             page ? `https://jsonplaceholder.typicode.com/comments?_page=${page + 1}`
                 : "https://jsonplaceholder.typicode.com/comments?_page=1"
         ).then((res) => {
             setData(res?.data)
-            setPagination(true)
         })
     }
     useEffect(() => {
@@ -54,8 +51,6 @@ function Pagination() {
                     })
                 }
             </div>
-            {
-            pagination && Data_Length>0 &&
             <ReactPaginate
                 previousLabel={"previous"}
                 nextLabel={"next"}
@@ -75,7 +70,6 @@ function Pagination() {
                 breakLinkClassName={"page-link"}
                 activeClassName={"active"}
             ></ReactPaginate>
-            }
         </div>
     )
 }
