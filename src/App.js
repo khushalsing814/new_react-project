@@ -22,7 +22,7 @@ function App() {
   <Header/>
   <div className='add-padding-top'></div>
   <main className='container'>
-    <Routes>
+    <Routes basename='/new_react-project'>
       <Route path='/' element={<Main/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/table' element={<TableData/>}></Route>
