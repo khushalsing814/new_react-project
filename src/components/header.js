@@ -27,11 +27,11 @@ return (
           </li> */}
           <li className="nav-item">
             {/* <NavLink className="nav-link" aria-current="page" to="/pagination">pagination</NavLink> */}
-            <NavLink className="nav-link" aria-current="page" to="/newapi">pagination</NavLink>
+            {/* <NavLink className="nav-link" aria-current="page" to="/newapi">pagination</NavLink> */}
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink className="nav-link" aria-current="page" to="/about">about</NavLink>
-          </li>
+          </li> */}
         </ul>
         <form className="d-flex" role="search">
         <Link className="btn style_btn me-2" to="/login">login</Link>

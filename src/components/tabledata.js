@@ -98,25 +98,22 @@ function TableData() {
                   Loading...
                 </button>
                 :
-                currentPosts?.filter((items, index) => {
+                currentPosts?.filter((items) => {
                   if (inputfield.toLocaleLowerCase() !== '') {
-                    correctvalue = inputfield.length;
-                    return items.name.toLocaleLowerCase().startsWith(inputfield);
+                    return items.name.toLocaleLowerCase().startsWith(inputfield.toLocaleLowerCase());
                   } else {
-                    return items.name.toLocaleLowerCase().startsWith(inputfield.substring(0, correctvalue));
+                    return items;
                   }
                 })
 
                   /* dropdown filter */
-
-                  /* alphabetsFilter?.filter((items, index) => {
+                  .filter((items) => {
                       if (getdropdownvalue.toLocaleLowerCase() !== '') {
-                        correctvalue = inputfield.length;
-                        return items.name.toLocaleLowerCase().startsWith(getdropdownvalue);
+                        return items.name.toLocaleLowerCase().startsWith(getdropdownvalue.toLocaleLowerCase());
                       } else {
-                        return items.name.toLocaleLowerCase().startsWith(getdropdownvalue.substring(0, correctvalue));
+                        return items;
                       }
-                    })  */
+                    })  
                   .map((item, index) => {
                     return (
                       <>

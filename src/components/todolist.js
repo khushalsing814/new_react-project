@@ -21,7 +21,7 @@ function Todolist() {
     }]
     const [tableData, setTabledata] = useState(array);
     const [listData, setListData] = useState(geData());
-    const [updatedata , setUpdatedata]=useState([]);
+    const [updatedata, setUpdatedata] = useState();
     const [toggleupdatebtn, setToggleupdatebtn] = useState(true);
     const [checkedUpdate, setCheckedUpdate] = useState([]);
 
@@ -29,8 +29,9 @@ function Todolist() {
     const handleValue = (e) => {
         const key = e.target.name;
         const value = e.target.value;
-        setTabledata((tableData) =>
-            ({ ...tableData, [key]: value.trim() }))
+        const userid = { id: new Date().getTime().toString(), ...tableData };
+        setTabledata(() =>
+            ({ ...userid, [key]: value.trim() }))
         console.log(tableData)
     }
     const handleForm = (e) => {
@@ -60,11 +61,22 @@ function Todolist() {
         setToggleupdatebtn(true)
     }
 
-    const update = (uniqueid) => {
-        // setListData({...listData,tableData})
-        console.log(uniqueid)
+    const update = (e) => {
+        e.preventDefault();
+        setListData(
+            listData.map((elm, index) => {
+                if (index === updatedata) {
+                    console.log(index)
+                    console.log(updatedata)
+                    console.log(tableData)
+                    return  elm, tableData ;
+                }
+                return elm
+            })
+        )
 
     }
+
 
     // add data in localstorage
     useEffect(() => {
@@ -82,7 +94,7 @@ function Todolist() {
                     toggleupdatebtn ?
                         <button type='submit' className='btn btn-outline-success w-auto me-3' onClick={handleForm}>Submit</button>
                         :
-                        <button type='submit' className='btn btn-outline-primary w-auto me-3' onClick={update(updatedata)}>update</button>
+                        <button type='submit' className='btn btn-outline-primary w-auto me-3' onClick={update}>update</button>
                 }
                 {listData.length > 0 &&
                     <button type='submit' className='btn btn-outline-danger w-auto me-3' onClick={removeall}>remove all</button>
