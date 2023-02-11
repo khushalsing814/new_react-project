@@ -20,7 +20,7 @@ function Login() {
     } else {
         navigate('/login')
     }
-},[])
+})
   // const geyData = async () => {
   //   if(apiData !== ''){
   //     await axios.get(`https://reactjs-application-a1e1c-default-rtdb.firebaseio.com/Users_Data_Records.json`).then((res) => {
