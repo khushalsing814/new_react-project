@@ -37,7 +37,7 @@ function Todolistdata({ listData, setListData, setTabledata,setToggleupdatebtn,s
                 <tbody>
                     {
                         listData.length > 0 ?
-                            listData.map((item, index) => {
+                            listData.map((item, index) => { 
                                 return (
                                     <>
                                         <tr key={index}>

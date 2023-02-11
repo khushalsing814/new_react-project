@@ -77,7 +77,6 @@ function Todolist() {
 
     }
 
-
     // add data in localstorage
     useEffect(() => {
         localStorage.setItem('list', JSON.stringify(listData))

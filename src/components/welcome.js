@@ -2,24 +2,28 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 function Welcome() {
-    const [apiData, setApiData] = useState([]);
-    const geyData = async () => {
-        if(apiData !== ''){
-          await axios.get(`https://reactjs-application-a1e1c-default-rtdb.firebaseio.com/Users_Data_Records.json`).then((res) => {
-            setApiData(res.data);
-           
-          })
-        }
-      }
+  const [apidata, setApiData] = useState([]);
 
-      useEffect(() => {
-        geyData();
-      }, [])
-
+  useEffect(() => {
+    axios("https://dummyjson.com/products").then((res) => {
+      setApiData(res?.data?.products);
+    });
+  }, []);
+  console.log(apidata, "here is console of api data")
   return (
     <div>
-    <h1>welcome:{apiData.email}</h1>
-      
+      {
+        apidata?.map((item, index) => {
+          return (
+            <div>
+              <div>{item.title}</div>
+              <div>{item.brand}</div>
+              <img src={item.images} />
+              <div>{item.description}</div>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }

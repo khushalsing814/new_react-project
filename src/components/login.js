@@ -13,47 +13,46 @@ function Login() {
   const [checkvalidation,setCheckvalidation ] = useState({});
   let navigate = useNavigate();
 
-  const geyData = async () => {
-    if(apiData !== ''){
-      await axios.get(`https://reactjs-application-a1e1c-default-rtdb.firebaseio.com/Users_Data_Records.json`).then((res) => {
-        setApiData(res.data);
-      })
-    }
-  }
-  useEffect(() => {
-    geyData();
-  }, [])
+  // const geyData = async () => {
+  //   if(apiData !== ''){
+  //     await axios.get(`https://reactjs-application-a1e1c-default-rtdb.firebaseio.com/Users_Data_Records.json`).then((res) => {
+  //       setApiData(res.data);
+  //     })
+  //   }
+  // }
+  // useEffect(() => {
+  //   geyData();
+  // }, [])
 
   const handlevalue=(e)=>{
     setinputData({...inputData,[e.target.name]:e.target.value})
   }
 
-  const validate=(Data)=>{
-    if(Data.email === inputData.email && Data.password === inputData.password){
-      const path ="/welcome";
-      navigate(path);
-    }else{
-      alert("false")
-    }
-    // if(inputData.email !== Data.email && inputData.password !== Data.password ){
-    //   alert("sorry")
-    // }else{
-    //   alert("success")
-    // }
-  }
-
   const HaldleValidate = (e)=>{
     e.preventDefault();
-    const fetchresult=[];
-    for(let key in apiData){
-      fetchresult.unshift(
-          {
-              ...apiData[key],id:key
-          }
-      )
-      setCheckvalidation(validate(...fetchresult));
-  }
- 
+   let a=localStorage.getItem('signup')
+   let a1= JSON.parse(a)
+    let check_email = (inputData.email).toLowerCase();
+    let check_password = (inputData.password).toLowerCase();
+    console.log(check_email)
+    console.log(check_password)
+    if(a1.email === check_email && a1.password === check_password){
+      alert('success')
+      const path ="/Welcome";
+      navigate(path);
+    }else{
+      alert('fail') 
+    }
+  //   const fetchresult=[];
+  //   for(let key in apiData){
+  //     fetchresult.unshift(
+  //         {
+  //             ...apiData[key],id:key
+  //         }
+  //     )
+  //     setCheckvalidation(validate(...fetchresult));
+  // }
+
   }
   return (
     <>

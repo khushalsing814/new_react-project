@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { encrypt, decrypt } from "n-krypta"
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios'
 
 function Signup() {
@@ -18,6 +19,7 @@ function Signup() {
     const [show_password, setShow_password] = useState(true);
     const [textpassword, setTextpassword] = useState("password");
     const ref = useRef({});
+    let navigate = useNavigate();
 
     const handleEye = () => {
         setShow_password(!show_password);
@@ -57,22 +59,12 @@ function Signup() {
     // validate end
 
     // fetch api start
-    const detchDataApi = async() => {
+    const detchDataApi =() => {
         if (Object.keys(formerrors).length === 0 && isSubmit) {
              try {
-                await fetch(`https://reactjs-application-a1e1c-default-rtdb.firebaseio.com/Users_Data_Records.json`,
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "applicatio/json",
-                        },
-                        body: JSON.stringify({
-                            firstname: tableData.firstname.toLocaleLowerCase(),
-                            lastname: tableData.lastname.toLocaleLowerCase(),
-                            email: tableData.email.toLocaleLowerCase(),
-                            password: tableData.password.toLocaleLowerCase()
-                        })
-                    })
+                localStorage.setItem('signup',JSON.stringify(tableData).toLocaleLowerCase());
+                const path ="/welcome";
+                navigate(path);
                 alert("Data Stored")
                 setTableData({ firstname: "", lastname: "", email: "", password: "", cpassword: "" })
                 } catch (err) {
