@@ -18,6 +18,16 @@ function Signup() {
     const [isSubmit, setIssubmit] = useState(false);
     const [show_password, setShow_password] = useState(true);
     const [textpassword, setTextpassword] = useState("password");
+
+    useEffect(() => {
+        let login = localStorage.getItem('signup');
+        if (login) {
+            navigate('/welcome')
+        } else {
+            navigate('/signup')
+        }
+    },[])
+
     const ref = useRef({});
     let navigate = useNavigate();
 
@@ -63,7 +73,7 @@ function Signup() {
         if (Object.keys(formerrors).length === 0 && isSubmit) {
              try {
                 localStorage.setItem('signup',JSON.stringify(tableData).toLocaleLowerCase());
-                const path ="/welcome";
+                const path ="/login";
                 navigate(path);
                 alert("Data Stored")
                 setTableData({ firstname: "", lastname: "", email: "", password: "", cpassword: "" })

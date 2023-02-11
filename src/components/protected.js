@@ -7,13 +7,13 @@ function Protected(props) {
     const navigate = useNavigate();
     const { Cmp } = props;
     useEffect(() => {
-        let login = localStorage.getItem('signup')
-        if (!login) {
-            navigate('/login')
-        } else {
+        let login = localStorage.getItem('signup');
+        if (login) {
             navigate('/welcome')
+        } else {
+            navigate('/login')
         }
-    })
+    },[])
     return (
         <div>
             <Cmp />
