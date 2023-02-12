@@ -26,7 +26,7 @@ function Signup() {
         } else {
             navigate('/signup')
         }
-    })
+    },[])
 
     const ref = useRef({});
     let navigate = useNavigate();

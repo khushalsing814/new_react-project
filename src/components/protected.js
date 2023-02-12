@@ -13,7 +13,7 @@ function Protected(props) {
         } else {
             navigate('/login')
         }
-    })
+    },[])
     return (
         <div>
             <Cmp />
