@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/new_react-project/static/css/main.2a822f9b.css",
-    "main.js": "/new_react-project/static/js/main.c5d87f48.js",
+    "main.js": "/new_react-project/static/js/main.dc4f8fbf.js",
     "static/js/787.1067a2cd.chunk.js": "/new_react-project/static/js/787.1067a2cd.chunk.js",
     "static/media/loin_logo.svg": "/new_react-project/static/media/loin_logo.efb5d28d39d3d0237af8842c0412d175.svg",
     "index.html": "/new_react-project/index.html",
     "main.2a822f9b.css.map": "/new_react-project/static/css/main.2a822f9b.css.map",
-    "main.c5d87f48.js.map": "/new_react-project/static/js/main.c5d87f48.js.map",
+    "main.dc4f8fbf.js.map": "/new_react-project/static/js/main.dc4f8fbf.js.map",
     "787.1067a2cd.chunk.js.map": "/new_react-project/static/js/787.1067a2cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a822f9b.css",
-    "static/js/main.c5d87f48.js"
+    "static/js/main.dc4f8fbf.js"
   ]
 }
