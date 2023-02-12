@@ -20,11 +20,11 @@ function Signup() {
     const [textpassword, setTextpassword] = useState("password");
 
     useEffect(() => {
-        let login = localStorage.getItem('signup');
-        if (login) {
+        let loginnn = localStorage.getItem('signup');
+        if (loginnn) {
             navigate('/welcome')
         } else {
-            navigate('/signup')
+            navigate('/login')
         }
     },[])
 
