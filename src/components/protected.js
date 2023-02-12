@@ -8,10 +8,10 @@ function Protected(props) {
     const { Cmp } = props;
     useEffect(() => {
         let login = localStorage.getItem('signup');
-        if (login) {
-            navigate('/welcome')
-        } else {
+        if (!login) {
             navigate('/login')
+        } else {
+            navigate('/welcome')
         }
     },[])
     return (
