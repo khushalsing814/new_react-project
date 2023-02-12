@@ -21,10 +21,10 @@ function Signup() {
 
     useEffect(() => {
         let login = localStorage.getItem('signup');
-        if (!login) {
-            navigate('/signup')
-        } else {
+        if (login) {
             navigate('/welcome')
+        } else {
+            navigate('/signup')
         }
     },[])
 

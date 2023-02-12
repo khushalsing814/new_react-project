@@ -15,10 +15,10 @@ function Login() {
 
   useEffect(() => {
     let login = localStorage.getItem('signup');
-    if (!login) {
-        navigate('/login')
-    } else {
+    if (login) {
         navigate('/welcome')
+    } else {
+        navigate('/login')
     }
 },[])
   // const geyData = async () => {
