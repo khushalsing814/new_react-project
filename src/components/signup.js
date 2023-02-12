@@ -23,6 +23,8 @@ function Signup() {
         let login = localStorage.getItem('signup');
         if (login) {
             navigate('/welcome')
+        } else {
+            navigate('/signup')
         }
     },[])
 

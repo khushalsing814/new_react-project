@@ -17,6 +17,8 @@ function Login() {
     let login = localStorage.getItem('signup');
     if (login) {
         navigate('/welcome')
+    } else {
+        navigate('/login')
     }
 },[])
   // const geyData = async () => {

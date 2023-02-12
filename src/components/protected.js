@@ -9,7 +9,9 @@ function Protected(props) {
     useEffect(() => {
         let login = localStorage.getItem('signup');
         if (login) {
-            navigate('/welcome');
+            navigate('/welcome')
+        } else {
+            navigate('/login')
         }
     },[])
     return (
