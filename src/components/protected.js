@@ -11,8 +11,8 @@ function Protected(props) {
         if (login) {
             navigate('/welcome')
         } else {
-            navigate('/login')
-        }
+            navigate('/signup')
+        } 
     },[])
     return (
         <div>
