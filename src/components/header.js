@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import logo_image from '../assests/images/loin_logo.svg'
-import { Nav, NavDropdown } from "react-bootstrap";
-import { useEffect } from "react";
 
 
 const Header = () => {
+  const[a,setA]=useState();
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem('signup'))
-  const logout = () => {
-    window.localStorage.removeItem('signup');
-    JSON.stringify('signup')
-    const path ="/login";
-    navigate(path);
-  }
 
+  const logout = () => {
+    if(window.localStorage.getItem('signup')){
+      setA(window.localStorage.removeItem('signup'));
+      const path = "/login";
+      navigate(path);
+    }
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg nav-bg-color" style={{ zIndex: 10000 }}>
@@ -56,7 +56,7 @@ const Header = () => {
               {
                 localStorage.getItem('signup') &&
                 <>
-                <Link className="btn style_btn" onClick={logout}>Logout</Link>
+                  <div className="btn style_btn" onClick={logout}>Logout</div>
                 </>
               }
             </form>

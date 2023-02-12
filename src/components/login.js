@@ -46,7 +46,7 @@ function Login() {
     console.log(check_password)
     if(a1.email === check_email && a1.password === check_password){
       alert('success')
-      const path ="/Welcome";
+      const path ="/welcome";
       navigate(path);
     }else{
       alert('fail') 
