@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'deploy'
+1 verbose cli ]
+2 info using npm@6.14.13
+3 info using node@v14.17.3
+4 verbose run-script [ 'predeploy', 'deploy', 'postdeploy' ]
+5 info lifecycle new_react-project@0.1.0~predeploy: new_react-project@0.1.0
+6 verbose lifecycle new_react-project@0.1.0~predeploy: unsafe-perm in lifecycle true
+7 verbose lifecycle new_react-project@0.1.0~predeploy: PATH: C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\git_projects_repo\new_react-project\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;C:\adb;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\GitHubDesktop\bin;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;
+8 verbose lifecycle new_react-project@0.1.0~predeploy: CWD: C:\git_projects_repo\new_react-project
+9 silly lifecycle new_react-project@0.1.0~predeploy: Args: [ '/d /s /c', 'npm run build' ]
+10 silly lifecycle new_react-project@0.1.0~predeploy: Returned: code: 0  signal: null
+11 info lifecycle new_react-project@0.1.0~deploy: new_react-project@0.1.0
+12 verbose lifecycle new_react-project@0.1.0~deploy: unsafe-perm in lifecycle true
+13 verbose lifecycle new_react-project@0.1.0~deploy: PATH: C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\git_projects_repo\new_react-project\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;C:\adb;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\GitHubDesktop\bin;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;
+14 verbose lifecycle new_react-project@0.1.0~deploy: CWD: C:\git_projects_repo\new_react-project
+15 silly lifecycle new_react-project@0.1.0~deploy: Args: [ '/d /s /c', 'gh-pages -d build' ]
+16 silly lifecycle new_react-project@0.1.0~deploy: Returned: code: 1  signal: null
+17 info lifecycle new_react-project@0.1.0~deploy: Failed to exec deploy script
+18 verbose stack Error: new_react-project@0.1.0 deploy: `gh-pages -d build`
+18 verbose stack Exit status 1
+18 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\index.js:332:16)
+18 verbose stack     at EventEmitter.emit (events.js:375:28)
+18 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\lib\spawn.js:55:14)
+18 verbose stack     at ChildProcess.emit (events.js:375:28)
+18 verbose stack     at maybeClose (internal/child_process.js:1055:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)
+19 verbose pkgid new_react-project@0.1.0
+20 verbose cwd C:\git_projects_repo\new_react-project
+21 verbose Windows_NT 10.0.22621
+22 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "deploy"
+23 verbose node v14.17.3
+24 verbose npm  v6.14.13
+25 error code ELIFECYCLE
+26 error errno 1
+27 error new_react-project@0.1.0 deploy: `gh-pages -d build`
+27 error Exit status 1
+28 error Failed at the new_react-project@0.1.0 deploy script.
+28 error This is probably not a problem with npm. There is likely additional logging output above.
+29 verbose exit [ 1, true ]
