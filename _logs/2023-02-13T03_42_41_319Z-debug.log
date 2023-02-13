@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'deploy'
+1 verbose cli ]
+2 info using npm@6.14.13
+3 info using node@v14.17.3
+4 verbose run-script [ 'predeploy', 'deploy', 'postdeploy' ]
+5 info lifecycle new_react-project@0.1.0~predeploy: new_react-project@0.1.0
+6 verbose lifecycle new_react-project@0.1.0~predeploy: unsafe-perm in lifecycle true
+7 verbose lifecycle new_react-project@0.1.0~predeploy: PATH: C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\git_projects_repo\new_react-project\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;C:\adb;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Manur\AppData\Local\Microsoft\WindowsApps;C:\Users\Manur\AppData\Local\GitHubDesktop\bin;C:\Users\Manur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manur\AppData\Roaming\npm;
+8 verbose lifecycle new_react-project@0.1.0~predeploy: CWD: C:\git_projects_repo\new_react-project
+9 silly lifecycle new_react-project@0.1.0~predeploy: Args: [ '/d /s /c', 'npm run build' ]
+10 silly lifecycle new_react-project@0.1.0~predeploy: Returned: code: 1  signal: null
+11 info lifecycle new_react-project@0.1.0~predeploy: Failed to exec predeploy script
+12 verbose stack Error: new_react-project@0.1.0 predeploy: `npm run build`
+12 verbose stack Exit status 1
+12 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\index.js:332:16)
+12 verbose stack     at EventEmitter.emit (events.js:375:28)
+12 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\lib\spawn.js:55:14)
+12 verbose stack     at ChildProcess.emit (events.js:375:28)
+12 verbose stack     at maybeClose (internal/child_process.js:1055:16)
+12 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)
+13 verbose pkgid new_react-project@0.1.0
+14 verbose cwd C:\git_projects_repo\new_react-project
+15 verbose Windows_NT 10.0.22621
+16 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "deploy"
+17 verbose node v14.17.3
+18 verbose npm  v6.14.13
+19 error code ELIFECYCLE
+20 error errno 1
+21 error new_react-project@0.1.0 predeploy: `npm run build`
+21 error Exit status 1
+22 error Failed at the new_react-project@0.1.0 predeploy script.
+22 error This is probably not a problem with npm. There is likely additional logging output above.
+23 verbose exit [ 1, true ]

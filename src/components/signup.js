@@ -18,9 +18,9 @@ function Signup() {
     const [isSubmit, setIssubmit] = useState(false);
     const [show_password, setShow_password] = useState(true);
     const [textpassword, setTextpassword] = useState("password");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const navigate = useNavigate();
         let loginnn = localStorage.getItem('signup');
         if (loginnn) {
             navigate('/welcome')
