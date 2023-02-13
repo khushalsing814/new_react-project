@@ -19,17 +19,16 @@ function Signup() {
     const [show_password, setShow_password] = useState(true);
     const [textpassword, setTextpassword] = useState("password");
     const navigate = useNavigate();
+    const ref = useRef({});
 
     useEffect(() => {
         let loginnn = localStorage.getItem('signup');
         if (loginnn) {
             navigate('/welcome')
         } else {
-            navigate('/login')
+            navigate('/signup')
         }
     },[])
-
-    const ref = useRef({});
 
     const handleEye = () => {
         setShow_password(!show_password);
