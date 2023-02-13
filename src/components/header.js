@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import logo_image from '../assests/images/loin_logo.svg'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 const Header = () => {
-  const[a,setA]=useState();
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem('signup'))
 
   const logout = () => {
-    if(window.localStorage.getItem('signup')){
-      setA(window.localStorage.removeItem('signup'));
+    if (window.localStorage.getItem('signup')) {
+      window.localStorage.removeItem('signup');
       const path = "/login";
       navigate(path);
     }
@@ -56,7 +57,9 @@ const Header = () => {
               {
                 localStorage.getItem('signup') &&
                 <>
-                  <div className="btn style_btn" onClick={logout}>Logout</div>
+                  <DropdownButton id="dropdown_color" title={users && users.firstname}> 
+                    <Dropdown.Item  onClick={logout}>Logout</Dropdown.Item>
+                  </DropdownButton>
                 </>
               }
             </form>

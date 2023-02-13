@@ -339,6 +339,12 @@ footer.footer-style {
   background: #0d6efd !important;
   border-radius: 6px;
 }
+
+#dropdown_color{
+  background-color: orangered !important;
+  border-color: orangered !important;
+  text-transform: capitalize;
+}
 @media (max-width:1440px) {
   .table_parent {
     overflow: auto;
