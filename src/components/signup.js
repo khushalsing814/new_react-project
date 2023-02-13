@@ -20,6 +20,7 @@ function Signup() {
     const [textpassword, setTextpassword] = useState("password");
 
     useEffect(() => {
+        const navigate = useNavigate();
         let loginnn = localStorage.getItem('signup');
         if (loginnn) {
             navigate('/welcome')
@@ -29,7 +30,6 @@ function Signup() {
     },[])
 
     const ref = useRef({});
-    let navigate = useNavigate();
 
     const handleEye = () => {
         setShow_password(!show_password);
